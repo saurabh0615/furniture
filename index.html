@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/aos/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+    <!-- Navbar start -->
+    <div class="fixed-top">
+        <!-- Navbar for mobile screen -->
+        <nav class="navbar navbar-expand-lg navbar-light trans " id="navbarMain">
+            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <a class="navbar-brand mr-0 mx-sm-3  d-block d-lg-none" href="index.html"><img src="img/logo.png" height="50">
+            </a>
+            <div class="">
+                <div class="float-right d-block d-lg-none">
+                    <i onclick="showShoppingCart()" class="fa btn fa-shopping-bag fa-lg py-1 " data-toggle="dropdown"></i>
+                </div>
+                <div class="float-right d-block d-lg-none">
+                    <i onclick="toggleSearch()" class="fa fa-search pr-sm-3  py-2  p-2 text-dark" data-toggle="dropdown"></i>
+                </div>
+            </div>
+
+            <!-- Navbar for mobile  screen end -->
+
+
+            <div class="collapse navbar-collapse justify-content-center w-100 order-1 order-lg-0" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-lg-5 pl-lg-5">
+                    <li class="nav-item mx-lg-3 px-2">
+                        <a class="nav-link text-dark txt align-text-bottom fnt px-0 " href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item mx-lg-3 px-2">
+                        <a onclick="dropdown()" class="nav-link cool text-dark fnt px-0 ">FURNITURE</a>
+                    </li>
+
+                    <li class="">
+                        <a class="navbar-brand mr-0 mx-sm-3  d-none d-lg-block" href="index.html"><img src="img/logo.png" height="50">
+                        </a>
+                    </li>
+                    <li class="nav-item mx-lg-3 px-2">
+                        <a class="nav-link text-dark fnt px-0" href="about.html">ABOUT</a>
+                    </li>
+                    <li class="nav-item mx-lg-3 px-2">
+                        <a class="nav-link text-dark fnt px-0" href="contact.html">CONTACT US</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="float-right d-none d-lg-block">
+                <i onclick="toggleSearch()" class="fa fa-search pr-3 fa-lg  text-dark" data-toggle="dropdown"></i>
+            </div>
+            <div class="float-right d-none d-lg-block">
+                <i onclick="showShoppingCart()" class="fa btn fa-shopping-bag fa-lg mr-3" data-toggle="dropdown"></i>
+            </div>
+            <div id="shopping-cart" class="shadow">
+                <div class="border-bottom">
+                    <div class="row">
+                        <div class="col-8">
+                            <h4 class="text-muted m-0 p-4">CART</h4>
+                        </div>
+                        <div class="col-4 d-flex align-items-center justify-content-center">
+                            <i class="fa fa-times btn fa-lg" onclick="hideShoppingCart()"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center h-100 align-items-center">
+                    YOUR CART IS EMPTY
+                </div>
+            </div>
+
+        </nav>
+        <div class="row justify-content-center overflow-auto" id="furniture-dropdown">
+            <div class="col-lg-8 mb-5">
+                <div class="row  ml-2 ml-lg-0">
+                    <div class="col-md-3 col-6 pl-0 pr-0 bg-white">
+                        <h5 class="dropdown-header  font-weight-bolder pt-4 pb-3 border-bottom text-uppercase">HOME</h5>
+
+                        <a class="dropdown-item text-muted" href="#">Sofas</a>
+                        <a class="dropdown-item text-muted" href="#">Beds
+                        </a>
+                        <a class="dropdown-item text-muted" href="#">Chairs
+                        </a>
+                        <a class="dropdown-item text-muted" href="#">Tables
+                        </a>
+                        <a class="dropdown-item text-muted" href="#">Cabinetry
+                        </a>
+                        <a class="dropdown-item text-muted" href="#">Seating
+                        </a>
+                        <a class="dropdown-item text-muted mb-5" href="#">Dining & Bar
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-6  pl-0 pr-0 bg-light">
+                        <h5 class="dropdown-header  font-weight-bolder pt-4 pb-3 border-bottom text-uppercase">OFFICE</h5>
+
+                        <a class="dropdown-item text-muted" href="#">Desks</a>
+                        <a class="dropdown-item text-muted" href="#">Tables
+                        </a>
+                        <a class="dropdown-item text-muted" href="#">Chairs
+                        </a>
+                        <a class="dropdown-item text-muted" href="#">Cabinets
+                        </a>
+                        <a class="dropdown-item text-muted" href="#">Bookshelves
+    
+                        </a>
+                        <a class="dropdown-item text-muted" href="#">Stools
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-6  pl-0 pr-0 bg-white">
+                        <h5 class="dropdown-header  font-weight-bolder pt-4 pb-3 border-bottom text-uppercase">NEW ARRIVAL</h5>
+
+                        <a class="dropdown-item text-muted" href="#">All New Arrivals </a>
+                        <a class="dropdown-item text-muted" href="#">Living Room
+                        </a>
+                        <a class="dropdown-item text-muted" href="#">Bed Room
+                        </a>
+                        <a class="dropdown-item text-muted" href="#">Dining Room
+                        </a>
+                        <a class="dropdown-item text-muted" href="#">Outdoor
+    
+                        </a>
+                        <a class="dropdown-item text-muted" href="#">Office
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-6 pr-0 pl-0 bg-light">
+                        <h5 class="dropdown-header  font-weight-bolder pt-4 pb-3 border-bottom text-uppercase">COLLECTION</h5>
+
+                        <a class="dropdown-item text-muted" href="#">Shop by Ideas</a>
+                        <a class="dropdown-item text-muted" href="#">Best sellers
+                        </a>
+                        <a class="dropdown-item text-muted" href="Furniture.html">All Furniture
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="search-show">
+            <div class="input-group border py-2 bg-white">
+                <div class="input-group-prepend">
+                    <span class="input-group-text  rounded-0 fa fa-search bg-white border-0"></span>
+                </div>
+                <input type="text" class="form-control border-0" placeholder="Search">
+                <div class="input-group-append ">
+                    <span onclick="toggleSearch()" class="input-group-text fa fa-times fa-lg bg-white rounded-0 border-0 pr-3"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- navbar end -->
+    <div>
+        <img src="./img/hero.png" class="img-fluid" alt=" ">
+
+    </div>
+    <!--Navbar end-->
+
+    <!--product section start-->
+    <div class="bg-light ">
+        <div class="pt-sm-5 pt-4 pb-4 ">
+            <div class="brd-bottom p-sm-4 mx-sm-5 ">
+                <div class="container">
+                    <div class="row ">
+                        <div class="col ">
+                            <h1 class="fnt text-secondary text-center font-weight-bolder ">CATEGORIES</h1>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-xl-6 col-lg-8 col-md-11">
+                            <p class="text-dark fnt-section">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</p>
+                        </div>
+                    </div>
+                    <div class="row pt-4 ">
+                        <div class="col-md-3 pb-4 px-sm-0 ">
+                            <div class="img-ani ">
+                                <img class="img-fluid img1 " src="img/CHAIRS.png " alt="Chair image ">
+                                <img class="img-fluid img2 " src="img/COUCH.png " alt="Couch image ">
+                            </div>
+                            <div class="caption ">
+                                <div class="text-muted fnt text-center p-3 ">CHAIRS</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pb-4 px-sm-0 ">
+                            <div class="img-ani ">
+                                <img class="img-fluid img1 " src="img/COUCH.png " alt="Couch image ">
+                                <img class="img-fluid img2 " src="img/CHAIRS.png " alt="Chair image ">
+                            </div>
+                            <div class="caption ">
+                                <div class="text-muted fnt text-center p-3 ">COUCH</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pb-4 px-sm-0 ">
+                            <div class="img-ani ">
+                                <img class="img-fluid img1 " src="img/TABLE.png " alt="TABLE image ">
+                                <img class="img-fluid img2 " src="img/CHAIRS.png " alt="Chair image ">
+                            </div>
+                            <div class="caption ">
+                                <div class="text-muted fnt text-center p-3 ">TABLE</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pb-4 px-sm-0 ">
+                            <div class="img-ani ">
+                                <img class="img-fluid img1 " src="img/SOFAS.png " alt="SOFAS image ">
+                                <img class="img-fluid img2 " src="img/COUCH.png " alt="Couch image ">
+                            </div>
+                            <div class="caption ">
+                                <div class="text-muted fnt text-center p-3 ">SOFAS</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pb-4 px-sm-0 ">
+                            <div class="img-ani ">
+                                <img class="img-fluid img1 " src="img/OFFICE DESK.png " alt="Office desk ">
+                                <img class="img-fluid img2 " src="img/TABLE.png " alt="TABLE image ">
+                            </div>
+                            <div class="caption ">
+                                <div class="text-muted fnt text-center p-3 ">OFFICE DESK</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pb-4 px-sm-0 ">
+                            <div class="img-ani ">
+                                <img class="img-fluid img1 " src="img/BEDS.png " alt="Beds image ">
+                                <img class="img-fluid img2 " src="img/OFFICE DESK.png " alt="Office desk ">
+                            </div>
+                            <div class="caption ">
+                                <div class="text-muted fnt text-center p-3 ">BEDS</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pb-4 px-sm-0 ">
+                            <div class="img-ani ">
+                                <img class="img-fluid img1 " src="img/CABINET.png " alt="CABINET image ">
+                                <img class="img-fluid img2 " src="img/BEDS.png " alt="Beds image ">
+                            </div>
+                            <div class="caption ">
+                                <div class="text-muted fnt text-center p-3 ">CABINET</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pb-4 px-sm-0 ">
+                            <div class="img-ani ">
+                                <img class="img-fluid img1 " src="img/LOUNGERS.png " alt="loungers image ">
+                                <img class="img-fluid img2 " src="img/BEDS.png " alt="Beds image ">
+                            </div>
+                            <div class="caption ">
+                                <div class="text-muted fnt text-center p-3 ">LOUNGERS</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pb-4 px-sm-0 ">
+                            <div class="img-ani ">
+                                <img class="img-fluid img1 " src="img/complementary.png " alt="Complementary image ">
+                                <img class="img-fluid img2 " src="img/LOUNGERS.png " alt="loungers image ">
+                            </div>
+                            <div class="caption ">
+                                <div class="text-muted fnt text-center p-3 ">COMPLEMENTARY</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 pb-4 px-sm-0 ">
+                            <div class="img-ani ">
+                                <img class="img-fluid img1 " src="img/benches.png " alt="Benches image ">
+                                <img class="img-fluid img2 " src="img/LOUNGERS.png " alt="loungers image ">
+                            </div>
+                            <div class="caption ">
+                                <div class="text-muted fnt text-center p-3 ">BENCHES</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4 mb-sm-0 ">
+                        <div class="col text-center ">
+                            <a href="Furniture.html " class="btn buttonhov border-white rounded-0 btn-dark px-5 py-3 fnt ">VIEW ALL PRODUCT</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Product Section end-->
+
+        <!--Carousel Area Start-->
+        <div class="container-fluid design pb-5 ">
+            <div class="row ">
+                <div class="col pb-4 ">
+                    <h2 class="fnt text-secondary text-center font-weight-bolder ">SELECT FROM IDEAS</h2>
+                </div>
+            </div>
+            <div class="row mb-4 justify-content-center ">
+                <div class="col-xl-6 col-lg-7 col-md-10 ">
+                    <p class="text-dark fnt-section ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. labore et dolore magna aliqua..
+                    </p>
+                </div>
+            </div>
+            <div id="carouselExampleControls " class="carousel slide " data-ride="carousel ">
+                <div class="carousel-inner ">
+                    <div class="carousel-item active ">
+                        <div class="row mx-sm-5 pl-sm-5 pl-sm-3 justify-content-center ">
+                            <div class="col-xl-5 pt-3 text-center ml-sm-5 p-7 ">
+                                <img class="img-fluid rounded img-sider " src="img/bedroomidea.png " alt="Beds image ">
+                                <div class="caption pt-3 ">
+                                    <div class="text-muted font-weight-bolder fnt text-center ">DESIGNER BED</div>
+                                    <div class="text-muted font-weight-bolder fnt text-center pb-3 ">₹ 25,000</div>
+                                </div>
+                                <div class="row ">
+                                    <div class="col text-center ">
+                                        <a href="Furniture.html " class="btn buttonhov border-white rounded-0 btn-dark px-5 py-3 fnt ">VIEW ALL PRODUCT</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 ml-5 d-none d-xl-block ">
+                                <div class="img-outer ">
+                                    <img class="img-fluid img-out " src="img/bedroomidea.png " alt="Chair image ">
+                                </div>
+                                <div class="img-inner ">
+                                    <img class="img-fluid img-inn " src="img/bedroomidea.png " alt="Chair image ">
+                                    <h1 class="text-white "> BEDROOM IDEA</h1>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <div class="row mx-sm-5 pl-sm-5 pl-sm-3 justify-content-center ">
+                            <div class="col-xl-5 pt-3 text-center ml-sm-5 p-7 ">
+                                <img class="img-fluid rounded img-sider " src="img/bedroomidea.png " alt="Beds image ">
+                                <div class="caption pt-3 ">
+                                    <div class="text-muted font-weight-bolder fnt text-center ">DESIGNER BED</div>
+                                    <div class="text-muted font-weight-bolder fnt text-center pb-3 ">₹ 25,000</div>
+                                </div>
+                                <div class="row ">
+                                    <div class="col text-center ">
+                                        <a href="Furniture.html " class="btn buttonhov border-white rounded-0 btn-dark px-5 py-3 fnt ">VIEW ALL PRODUCT</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 ml-5 d-none d-xl-block ">
+                                <div class="img-outer ">
+                                    <img class="img-fluid img-out " src="img/bedroomidea.png " alt="Chair image ">
+                                </div>
+                                <div class="img-inner ">
+                                    <img class="img-fluid img-inn " src="img/bedroomidea.png " alt="Chair image ">
+                                    <h1 class="text-white "> BEDROOM IDEA</h1>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <div class="row mx-sm-5 pl-sm-5 pl-sm-3 justify-content-center ">
+                            <div class="col-xl-5 pt-3 text-center ml-sm-5 p-7 ">
+                                <img class="img-fluid rounded img-sider " src="img/bedroomidea.png " alt="Beds image ">
+                                <div class="caption pt-3 ">
+                                    <div class="text-muted font-weight-bolder fnt text-center ">DESIGNER BED</div>
+                                    <div class="text-muted font-weight-bolder fnt text-center pb-3 ">₹ 25,000</div>
+                                </div>
+                                <div class="row ">
+                                    <div class="col text-center ">
+                                        <a href="Furniture.html " class="btn buttonhov border-white rounded-0 btn-dark px-5 py-3 fnt ">VIEW ALL PRODUCT</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 ml-5 d-none d-xl-block ">
+                                <div class="img-outer ">
+                                    <img class="img-fluid img-out " src="img/bedroomidea.png " alt="Chair image ">
+                                </div>
+                                <div class="img-inner ">
+                                    <img class="img-fluid img-inn " src="img/bedroomidea.png " alt="Chair image ">
+                                    <h1 class="text-white "> BEDROOM IDEA</h1>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev " href="#carouselExampleControls " role="button " data-slide="prev ">
+                    <i class="fa fa-angle-left fa-3x icon-curosel " aria-hidden="true "></i>
+                </a>
+                <a class="carousel-control-next " href="#carouselExampleControls " role="button " data-slide="next ">
+                    <i class="fa fa-angle-right fa-3x icon-curosel-right " aria-hidden="true "></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- About us Section start -->
+    <div class="abtimg ">
+        <div class="container ">
+            <div class="p-2 ">
+                <div class="row justify-content-end ">
+                    <div class="col-md-8 bg-white border-0 rounded-0 shadow my-5 ">
+                        <div class="p-xl-5 p-2 ">
+                            <h2 class="fnt text-secondary text-center font-weight-bolder mb-3 ">ABOUT US </h2>
+                            <p class="line-heght text-muted ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. labore et dolore magna aliqua..Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. labore et dolore magna aliqua..Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. labore et dolore
+                                magna aliqua..Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. labore et dolore magna aliqua..
+                            </p>
+                            <p class="text-center "><a href=" " class="text-muted border-bottom border-dark text-decoration-none ">Learn More</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--About section end-->
+
+
+    <!-- heading Section start -->
+    <div class="bglight ">
+        <div class="container ">
+            <div class="row pt-5 ">
+                <div class="col ">
+                    <h2 class="fnt text-secondary text-center font-weight-bolder ">HEADING</h2>
+                </div>
+
+            </div>
+            <div class="row pt-2 ">
+                <div class="col justify-content-center ">
+                    <p class="text-muted line-heght "> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. labore et dolore magna aliqua..Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. labore et dolore magna aliqua..Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. labore et dolore magna aliqua..Lorem
+                        ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Newsletter Section start -->
+
+    <div class="newsimg ">
+        <div class="container mt-5 pb-3 ">
+            <div class="d-flex justify-content-center row ">
+                <div class="col-md-10 ">
+                    <div class="p-3 px-sm-5 ">
+                        <h1 class="mt-4 fnt text-white text-center ">SUBSCRIBE TO OUR NEWSLETTER</h1>
+                        <div class="row justify-content-center ">
+                            <div class="col-xl-7 col-lg-10 p-0 ">
+                                <p class=" text-white pl-2 ">Subscribe to receive updates on new arrivals, access to exclusive deals,and other discount information.
+                                </p>
+
+                            </div>
+                        </div>
+
+                        <div class="offset-xl-2 offset-xl-0 offset-lg-1 mt-3 mb-3 ">
+                            <div class="form-group row mb-3 pl-lg-2 ">
+                                <div class="col-xl-6 col-md-7 mb-0 px-0 pr-lg-2 mr-lg-3 mb-4 mb-sm-0 "> <input id="e-mail " type="text " placeholder="Enter your email address.. " name="email " class="form-control input-box rounded-0 text-left py-3 pr-3 "> </div>
+                                <div class="ml-sm-3 col-xl-3 col-lg-3 col-md-4 px-0 "> <input type="submit " value="SUBSCRIBE " class="btn btn-block btn-secondary rounded-0 px-2 fnt "> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <!-- Footer start -->
+    <footer class="bg-light pt-4 ">
+        <div class="border-bottom ">
+            <div class="container ">
+                <div class="row pt-5 ">
+                    <div class="col-md-2 pt-2 mb-4 mb-sm-0 ">
+                        <img src="img/logo.png " height="50 ">
+                    </div>
+                    <div class="col-md-4 ">
+                        <ul class="listnone fnt ">
+                            <li class="text-dark font-weight-bolder ">CUSTOMER SERVICE</li>
+                            <li class="py-2 ">
+                                <a href=" " class="text-muted text-decoration-none "> SHIPPING POLICY</a></li>
+                            <li class=" ">
+                                <a href=" " class="text-muted text-decoration-none "> PRIVACY POLICY</a></li>
+
+                            <li class="py-2 ">
+                                <a href="# " class="text-muted text-decoration-none "> TERMS OF SERVICE</a></li>
+
+                            <li class=" ">
+                                <a href="# " class="text-muted text-decoration-none ">REFUND AND RETURN POLICY</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 ">
+                        <ul class="listnone fnt ">
+                            <li class="text-dark font-weight-bolder ">SHOP BY</li>
+                            <li class="py-2 ">
+                                <a href="# " class="text-muted text-decoration-none ">FURNITURE</a></li>
+
+                            <li class=" ">
+                                <a href="# " class="text-muted text-decoration-none ">CHAIRS</a></li>
+
+                            <li class="py-2 ">
+                                <a href=" " class="text-muted text-decoration-none ">STOOLS</a></li>
+
+                            <li class=" ">
+                                <a href="# " class="text-muted text-decoration-none ">TABLES</a></li>
+
+                            <li class="py-2 ">
+                                <a href=" " class="text-muted text-decoration-none ">SOFAS & BEDS </a></li>
+
+                            <li class=" ">
+                                <a href="# " class="text-muted text-decoration-none ">STORAGE</a></li>
+
+                            <li class="py-2 ">
+                                <a href=" " class="text-muted text-decoration-none ">LIGHTING</a></li>
+
+                            <li class=" ">
+                                <a href="# " class="text-muted text-decoration-none ">HOME DECOR</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 ">
+                        <ul class="listnone fnt text-muted ">
+                            <li class="text-dark font-weight-bolder ">DELIVERY & TERMS</li>
+                            <li class="py-2 ">
+                                <a href="# " class="text-muted text-decoration-none ">DELIVERY DETAILS</a></li>
+                            <li class=" ">
+                                <a href="# " class="text-muted text-decoration-none ">RETURNS POLICY</a></li>
+                            <li class="py-2 ">
+                                <a href=" " class="text-muted text-decoration-none ">TERMS & CONDITIONS </a></li>
+                            <li class=" ">
+                                <a href="# " class="text-muted text-decoration-none ">PRIVACY POLICY</a></li>
+                            <li class="py-2 ">
+                                <a href=" " class="text-muted text-decoration-none ">COOKIES</a></li>
+                            <li class=" ">
+                                <a href="# " class="text-muted text-decoration-none ">PAYMENT & SECURITY</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container ">
+            <div class="row px-3 px-sm-0 justify-content-end py-3 ">
+
+                <div class="offset-lg-7 offset-sm-3 mr-4 ">
+                    <span class="dot pt-2 mr-sm-5 mr-4 ">
+                           <a href=" "><img src="img/facebook.png " class="img-fluid pl-2 pb-2 "  alt=" "></a> 
+                        </span>
+                    <span class="dot p-2 mr-sm-5 mr-4 ">
+                          <a href=" "> <img src="img/twitter.png " class="img-fluid pb-3 pt-1 " alt=" "></a> 
+                        </span>
+                    <span class="dot p-2 mr-sm-5 mr-4 ">
+                           <a href=" "> <img src="img/instagram.png " class="img-fluid pb-3 " alt=" "></a>
+                        </span>
+                    <span class="dot p-2 ">
+                           <a href=" "><img src="img/mail.png " class="img-fluid pb-3 pt-1 " alt=" "></a> </span>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+
+
+    <script>
+        $(window).scroll(function() {
+            var nav = $('#navbarMain');
+            var top = 200;
+            if ($(window).scrollTop() >= top) {
+
+                nav.addClass('bg-white');
+
+            } else {
+                nav.removeClass('bg-white');
+            }
+        });
+
+
+        function showShoppingCart() {
+            document.getElementById('shopping-cart').classList.add('showCart');
+        }
+
+        function hideShoppingCart() {
+            document.getElementById('shopping-cart').classList.remove('showCart');
+        }
+
+        function toggleSearch() {
+            document.getElementById('search-show').classList.toggle('showCart');
+        }
+
+        function dropdown() {
+            document.getElementById('furniture-dropdown').classList.toggle('showCart');
+        }
+    </script>
+
+    <script src="vendor/aos/aos.js "></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

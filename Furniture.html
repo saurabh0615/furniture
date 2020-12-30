@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Furniture</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Navbar for mobile screen -->
+    <div class="fixed-top bg-white border-bottom">
+        <!-- Navbar for mobile screen -->
+        <nav class="navbar navbar-expand-lg navbar-light trans " id="navbarMain">
+            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <a class="navbar-brand mr-0 mx-sm-3  d-block d-lg-none" href="index.html"><img src="img/logo.png" height="50">
+            </a>
+            <div class="">
+                <div class="float-right d-block d-lg-none">
+                    <i onclick="showShoppingCart()" class="fa btn fa-shopping-bag fa-lg py-1 " data-toggle="dropdown"></i>
+                </div>
+                <div class="float-right d-block d-lg-none">
+                    <i onclick="toggleSearch()" class="fa fa-search pr-sm-3  py-2  p-2 text-dark" data-toggle="dropdown"></i>
+                </div>
+            </div>
+
+            <!-- Navbar for mobile  screen end -->
+
+
+            <div class="collapse navbar-collapse justify-content-center w-100 order-1 order-lg-0" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-lg-5 pl-lg-5">
+                    <li class="nav-item mx-lg-3 px-2">
+                        <a class="nav-link text-dark txt align-text-bottom fnt px-0 " href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item mx-lg-3 px-2">
+                        <a onclick="dropdown()" class="nav-link cool text-dark fnt px-0 ">FURNITURE</a>
+                    </li>
+
+                    <li class="">
+                        <a class="navbar-brand mr-0 mx-sm-3  d-none d-lg-block" href="index.html"><img src="img/logo.png" height="50">
+                        </a>
+                    </li>
+                    <li class="nav-item mx-lg-3 px-2">
+                        <a class="nav-link text-dark fnt px-0" href="about.html">ABOUT</a>
+                    </li>
+                    <li class="nav-item mx-lg-3 px-2">
+                        <a class="nav-link text-dark fnt px-0" href="contact.html">CONTACT US</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="float-right d-none d-lg-block">
+                <i onclick="toggleSearch()" class="fa fa-search pr-3 fa-lg  text-dark" data-toggle="dropdown"></i>
+            </div>
+            <div class="float-right d-none d-lg-block">
+                <i onclick="showShoppingCart()" class="fa btn fa-shopping-bag fa-lg mr-3" data-toggle="dropdown"></i>
+            </div>
+            <div id="shopping-cart" class="shadow">
+                <div class="border-bottom">
+                    <div class="row">
+                        <div class="col-8">
+                            <h4 class="text-muted m-0 p-4">CART</h4>
+                        </div>
+                        <div class="col-4 d-flex align-items-center justify-content-center">
+                            <i class="fa fa-times btn fa-lg" onclick="hideShoppingCart()"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center h-100 align-items-center">
+                    YOUR CART IS EMPTY
+                </div>
+            </div>
+
+        </nav>
+        <div class="row justify-content-center overflow-auto" id="furniture-dropdown">
+            <div class="col-lg-8 mb-5">
+                <div class="row  ml-2 ml-lg-0">
+                    <div class="col-md-3 col-6 pl-0 pr-0 bg-white">
+                        <h5 class="dropdown-header  font-weight-bolder pt-4 pb-3 border-bottom text-uppercase">HOME</h5>
+
+                        <a class="dropdown-item text-muted" href="#">Sofas</a>
+                        <a class="dropdown-item text-muted" href="#">Beds
+                        </a>
+                        <a class="dropdown-item text-muted" href="#">Chairs
+                        </a>
+                        <a class="dropdown-item text-muted" href="#">Tables
+                        </a>
+                        <a class="dropdown-item text-muted" href="#">Cabinetry
+                        </a>
+                        <a class="dropdown-item text-muted" href="#">Seating
+                        </a>
+                        <a class="dropdown-item text-muted mb-5" href="#">Dining & Bar
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-6  pl-0 pr-0 bg-light">
+                        <h5 class="dropdown-header  font-weight-bolder pt-4 pb-3 border-bottom text-uppercase">OFFICE</h5>
+
+                        <a class="dropdown-item text-muted" href="#">Desks</a>
+                        <a class="dropdown-item text-muted" href="#">Tables
+                        </a>
+                        <a class="dropdown-item text-muted" href="#">Chairs
+                        </a>
+                        <a class="dropdown-item text-muted" href="#">Cabinets
+                        </a>
+                        <a class="dropdown-item text-muted" href="#">Bookshelves
+    
+                        </a>
+                        <a class="dropdown-item text-muted" href="#">Stools
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-6  pl-0 pr-0 bg-white">
+                        <h5 class="dropdown-header  font-weight-bolder pt-4 pb-3 border-bottom text-uppercase">NEW ARRIVAL</h5>
+
+                        <a class="dropdown-item text-muted" href="#">All New Arrivals </a>
+                        <a class="dropdown-item text-muted" href="#">Living Room
+                        </a>
+                        <a class="dropdown-item text-muted" href="#">Bed Room
+                        </a>
+                        <a class="dropdown-item text-muted" href="#">Dining Room
+                        </a>
+                        <a class="dropdown-item text-muted" href="#">Outdoor
+    
+                        </a>
+                        <a class="dropdown-item text-muted" href="#">Office
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-6 pr-0 pl-0 bg-light">
+                        <h5 class="dropdown-header  font-weight-bolder pt-4 pb-3 border-bottom text-uppercase">COLLECTION</h5>
+
+                        <a class="dropdown-item text-muted" href="#">Shop by Ideas</a>
+                        <a class="dropdown-item text-muted" href="#">Best sellers
+                        </a>
+                        <a class="dropdown-item text-muted" href="Furniture.html">All Furniture
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="search-show">
+            <div class="input-group border py-2 bg-white">
+                <div class="input-group-prepend">
+                    <span class="input-group-text  rounded-0 fa fa-search bg-white border-0"></span>
+                </div>
+                <input type="text" class="form-control border-0" placeholder="Search">
+                <div class="input-group-append ">
+                    <span onclick="toggleSearch()" class="input-group-text fa fa-times fa-lg bg-white rounded-0 border-0 pr-3"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Navbar end-->
+    <!--product section start-->
+    <div class="container mt-5 pt-5 mb-5">
+        <h3 class="fnt text-secondary text-center font-weight-bolder mt-5 mb-4">ALL PRODUCTS</h3>
+        <p class="text-muted mb-4">Home / All products</p>
+        <div class="row">
+            <div class="col-md-3 ">
+                <h5 class="text-muted font-weight-bold border-gray pb-3">Filters</h5>
+                <h5 class="text-muted font-weight-bold pt-2">Category</h5>
+                <ul class="listnone border-gray  pl-3">
+                    <li class="py-2 ">
+                        <a href="# " class="text-muted text-decoration-none ">Sofas</a></li>
+
+                    <li class=" ">
+                        <a href="# " class="text-muted text-decoration-none ">Beds</a></li>
+
+                    <li class="py-2 ">
+                        <a href=" " class="text-muted text-decoration-none ">Chairs
+                        </a></li>
+
+                    <li class=" ">
+                        <a href="# " class="text-muted text-decoration-none ">Tables
+                        </a></li>
+
+                    <li class="py-2 ">
+                        <a href=" " class="text-muted text-decoration-none ">Cabinetry
+                        </a></li>
+
+                    <li class=" ">
+                        <a href="# " class="text-muted text-decoration-none ">Seating</a></li>
+
+                    <li class="py-2 ">
+                        <a href=" " class="text-muted text-decoration-none ">Dining & Bar</a></li>
+
+                    <li class=" ">
+                        <a href="# " class="text-muted text-decoration-none ">Desks</a></li>
+                    <li class="py-2 ">
+                        <a href=" " class="text-muted text-decoration-none ">Shelves</a></li>
+                    <li class="py-2 ">
+                        <a href=" " class="text-muted text-decoration-none ">Stools</a></li>
+                </ul>
+                <h5 class="text-muted font-weight-bold ">Price</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label text-muted pl-2" for="defaultCheck1">
+                        Under ₹2,000
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label text-muted pl-2" for="defaultCheck1">
+                        ₹2,000-₹5,000
+
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label text-muted pl-2" for="defaultCheck1">
+                        ₹5,000-₹10,000
+                    
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label text-muted pl-2" for="defaultCheck1">
+                       ₹10,000-₹20,000
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label text-muted pl-2" for="defaultCheck1">
+                       ₹20,000 & above
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="row pt-4 pt-lg-0">
+                    <div class="col-6">
+                        <p class="text-muted text-left">1000 Results</p>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group float-right">
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>Best selling</option>
+                                    <option>Price -- Low to High </option>
+                                    <option>Price -- High to Low </option>
+                                    <option>Newest First</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-4 pt-4 pt-lg-0">
+                        <div class="product-img d-flex align-items-center justify-content-center shadow-sm overflow-hidden">
+                            <img class="img-fluid" src="img/BEDS.png" alt="">
+                        </div>
+                        <p class="text-muted mb-0 pt-2">Moss Green Velvet Sofa <i class="fa fa-heart-o fa-lg p-1 float-right"></i></p>
+                        <p class="text-muted font-weight-bolder">₹ 11,000</p>
+                    </div>
+                    <div class="col-md-4 pt-4 pt-lg-0">
+                        <div class=" d-flex product-img align-items-center justify-content-center shadow-sm overflow-hidden">
+                            <img class="img-fluid " src="img/benches.png" alt="">
+                        </div>
+                        <p class="text-muted mb-0 pt-2">Moss Green Velvet Sofa <i class="fa fa-heart-o fa-lg p-1 float-right"></i></p>
+                        <p class="text-muted font-weight-bolder">₹ 11,000</p>
+                    </div>
+                    <div class="col-md-4 pt-4 pt-lg-0">
+                        <div class=" d-flex product-img align-items-center justify-content-center shadow-sm overflow-hidden">
+                            <img class="img-fluid " src="img/SOFAS.png" alt="">
+                        </div>
+                        <p class="text-muted mb-0 pt-2">Moss Green Velvet Sofa <i class="fa fa-heart-o fa-lg p-1 float-right"></i></p>
+                        <p class="text-muted font-weight-bolder">₹ 11,000</p>
+                    </div>
+                    <div class="col-md-4 pt-4 pt-lg-0">
+                        <div class=" d-flex product-img align-items-center justify-content-center shadow-sm overflow-hidden">
+                            <img class="img-fluid " src="img/TABLE.png" alt="">
+                        </div>
+                        <p class="text-muted mb-0 pt-2">Moss Green Velvet Sofa <i class="fa fa-heart-o fa-lg p-1 float-right"></i></p>
+                        <p class="text-muted font-weight-bolder">₹ 11,000</p>
+                    </div>
+                    <div class="col-md-4 pt-4 pt-lg-0">
+                        <div class=" d-flex product-img align-items-center justify-content-center shadow-sm overflow-hidden">
+                            <img class="img-fluid " src="img/BEDS.png" alt="">
+                        </div>
+                        <p class="text-muted mb-0 pt-2">Moss Green Velvet Sofa <i class="fa fa-heart-o fa-lg p-1 float-right"></i></p>
+                        <p class="text-muted font-weight-bolder">₹ 11,000</p>
+                    </div>
+                    <div class="col-md-4 pt-4 pt-lg-0">
+                        <div class=" d-flex product-img align-items-center justify-content-center shadow-sm overflow-hidden">
+                            <img class="img-fluid " src="img/BEDS.png" alt="">
+                        </div>
+                        <p class="text-muted mb-0 pt-2">Moss Green Velvet Sofa <i class="fa fa-heart-o fa-lg p-1 float-right"></i></p>
+                        <p class="text-muted font-weight-bolder">₹ 11,000</p>
+                    </div>
+                    <div class="col-md-4 pt-4 pt-lg-0">
+                        <div class=" d-flex product-img align-items-center justify-content-center shadow-sm overflow-hidden">
+                            <img class="img-fluid " src="img/BEDS.png" alt="">
+                        </div>
+                        <p class="text-muted mb-0 pt-2">Moss Green Velvet Sofa <i class="fa fa-heart-o fa-lg p-1 float-right"></i></p>
+                        <p class="text-muted font-weight-bolder">₹ 11,000</p>
+                    </div>
+                    <div class="col-md-4 pt-4 pt-lg-0">
+                        <div class=" d-flex product-img align-items-center justify-content-center shadow-sm overflow-hidden">
+                            <img class="img-fluid " src="img/BEDS.png" alt="">
+                        </div>
+                        <p class="text-muted mb-0 pt-2">Moss Green Velvet Sofa <i class="fa fa-heart-o fa-lg p-1 float-right"></i></p>
+                        <p class="text-muted font-weight-bolder">₹ 11,000</p>
+                    </div>
+                </div>
+                <div class="row mt-2 justify-content-center align-items-center mr-5 pr-2 mr-sm-0 pr-sm-0">
+                    <div class="col-lg-3 col-md-5 col-5">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination border-0">
+                                <li class="page-item">
+                                    <a class="page-link border-0" href="#" aria-label="Previous">
+                                        <span aria-hidden="true"><i class="fa fa-angle-left fa-lg"></i></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                </li>
+                                <li class="page-item active"><a class="page-link active border-0" href="#">1</a></li>
+                                <li class="page-item border-0"><a class="page-link border-0" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link border-0" href="#">3</a></li>
+                                <li class="page-item ">
+                                    <a class="page-link border-0" href="#" aria-label="Next">
+                                        <span aria-hidden="true"><i class="fa fa-angle-right fa-lg"></i></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!--product section end-->
+
+    <div class="newsimg ">
+        <div class="container mt-5 pb-3 ">
+            <div class="d-flex justify-content-center row ">
+                <div class="col-md-10 ">
+                    <div class="p-3 px-sm-5 ">
+                        <h1 class="mt-4 fnt text-white text-center ">SUBSCRIBE TO OUR NEWSLETTER</h1>
+                        <div class="row justify-content-center">
+                            <div class="col-xl-7 col-lg-10 p-0">
+                                <p class=" text-white pl-2">Subscribe to receive updates on new arrivals, access to exclusive deals,and other discount information.
+                                </p>
+
+                            </div>
+                        </div>
+
+                        <div class="offset-xl-2 offset-xl-0  offset-lg-1 mt-3 mb-3 ">
+                            <div class="form-group row mb-3  pl-lg-2 ">
+                                <div class="col-xl-6 col-md-7 mb-0 px-0 pr-lg-2 mr-lg-3 mb-4 mb-sm-0"> <input id="e-mail " type="text " placeholder="Enter your email address.. " name="email " class="form-control input-box rounded-0 text-left py-3 pr-3 "> </div>
+                                <div class="ml-md-3  mt-lg-0 col-xl-3 col-lg-3 col-md-4  px-0 "> <input type="submit " value="SUBSCRIBE " class="btn btn-block btn-secondary rounded-0 px-2 fnt "> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Footer start -->
+    <footer class="bg-light pt-4 ">
+        <div class="border-bottom ">
+            <div class="container ">
+                <div class="row pt-5 ">
+                    <div class="col-md-2 pt-2 mb-4 mb-sm-0">
+                        <img src="img/logo.png" height="50">
+                    </div>
+                    <div class="col-md-4 ">
+                        <ul class="listnone fnt ">
+                            <li class="text-dark font-weight-bolder">CUSTOMER SERVICE</li>
+                            <li class="py-2 ">
+                                <a href=" " class="text-muted text-decoration-none "> SHIPPING POLICY</a></li>
+                            <li class=" ">
+                                <a href=" " class="text-muted text-decoration-none "> PRIVACY POLICY</a></li>
+
+                            <li class="py-2 ">
+                                <a href="# " class="text-muted text-decoration-none "> TERMS OF SERVICE</a></li>
+
+                            <li class=" ">
+                                <a href="# " class="text-muted text-decoration-none ">REFUND AND RETURN POLICY</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 ">
+                        <ul class="listnone fnt ">
+                            <li class="text-dark font-weight-bolder ">SHOP BY</li>
+                            <li class="py-2 ">
+                                <a href="# " class="text-muted text-decoration-none ">FURNITURE</a></li>
+
+                            <li class=" ">
+                                <a href="# " class="text-muted text-decoration-none ">CHAIRS</a></li>
+
+                            <li class="py-2 ">
+                                <a href=" " class="text-muted text-decoration-none ">STOOLS</a></li>
+
+                            <li class=" ">
+                                <a href="# " class="text-muted text-decoration-none ">TABLES</a></li>
+
+                            <li class="py-2 ">
+                                <a href=" " class="text-muted text-decoration-none ">SOFAS & BEDS </a></li>
+
+                            <li class=" ">
+                                <a href="# " class="text-muted text-decoration-none ">STORAGE</a></li>
+
+                            <li class="py-2 ">
+                                <a href=" " class="text-muted text-decoration-none ">LIGHTING</a></li>
+
+                            <li class=" ">
+                                <a href="# " class="text-muted text-decoration-none ">HOME DECOR</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 ">
+                        <ul class="listnone fnt text-muted ">
+                            <li class="text-dark font-weight-bolder ">DELIVERY & TERMS</li>
+                            <li class="py-2 ">
+                                <a href="# " class="text-muted text-decoration-none ">DELIVERY DETAILS</a></li>
+                            <li class=" ">
+                                <a href="# " class="text-muted text-decoration-none ">RETURNS POLICY</a></li>
+                            <li class="py-2 ">
+                                <a href=" " class="text-muted text-decoration-none ">TERMS & CONDITIONS </a></li>
+                            <li class=" ">
+                                <a href="# " class="text-muted text-decoration-none ">PRIVACY POLICY</a></li>
+                            <li class="py-2 ">
+                                <a href=" " class="text-muted text-decoration-none ">COOKIES</a></li>
+                            <li class=" ">
+                                <a href="# " class="text-muted text-decoration-none ">PAYMENT & SECURITY</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container ">
+            <div class="row px-3 px-sm-0 justify-content-end py-3 ">
+
+                <div class="offset-lg-7 offset-sm-3 mr-4 ">
+                    <span class="dot pt-2 mr-sm-5 mr-4  ">
+                           <a href=" "><img src="img/facebook.png " class="img-fluid pl-2 pb-2 "  alt=" "></a> 
+                        </span>
+                    <span class="dot p-2 mr-sm-5 mr-4  ">
+                          <a href=" "> <img src="img/twitter.png " class="img-fluid pb-3 pt-1 " alt=" "></a> 
+                        </span>
+                    <span class="dot p-2 mr-sm-5 mr-4  ">
+                           <a href=" "> <img src="img/instagram.png " class="img-fluid pb-3 " alt=" "></a>
+                        </span>
+                    <span class="dot p-2 ">
+                           <a href=" "><img src="img/mail.png " class="img-fluid pb-3 pt-1 " alt=" "></a> </span>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+
+
+
+    <script>
+        function showShoppingCart() {
+            document.getElementById('shopping-cart').classList.add('showCart');
+        }
+
+        function hideShoppingCart() {
+            document.getElementById('shopping-cart').classList.remove('showCart');
+        }
+
+        function toggleSearch() {
+            document.getElementById('search-show').classList.toggle('showCart');
+        }
+
+        function dropdown() {
+            document.getElementById('furniture-dropdown').classList.toggle('showCart');
+        }
+    </script>
+
+</body>
+
+</html>

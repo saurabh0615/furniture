@@ -1,0 +1,358 @@
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .h-3 {
+        height: 3rem;
+    }
+    
+    .h-5 {
+        height: 5rem;
+    }
+    
+    .logbrd {
+        border: 2px solid gray;
+    }
+    
+    .fnt {
+        font-family: "Times New Roman", Times, serif;
+        font-weight: 100;
+    }
+    
+    .nav-item a:hover {
+        border-bottom: 2px solid #de890f;
+    }
+    
+    .right-0 {
+        right: 0;
+    }
+    
+    .bgimg {
+        background: url(../img/hero.png) no-repeat;
+        height: 100vh;
+        width: 100%;
+        background-size: cover;
+    }
+    
+    .fnt-section {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .brd-bottom {
+        border-bottom: 1px solid black;
+    }
+    
+    .listnone {
+        list-style-type: none;
+    }
+    
+    .text-decoration-none {
+        text-decoration-line: none;
+    }
+    
+    .dot {
+        height: 40px;
+        width: 40px;
+        background-color: white;
+        border-radius: 50%;
+        display: inline-block;
+        border: 3px solid gray;
+    }
+    
+    .newsimg {
+        background-image: url(../img/nws.png);
+        background-size: 100%;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .newsimg::after {
+        content: "";
+        background-color: black;
+    }
+    
+    .line-heght {
+        line-height: 1.4rem;
+    }
+    
+    .abtimg {
+        background: url(../img/aboutus.png) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        width: 100%;
+    }
+    
+    .trans {
+        background-color: rgb(255 251 251 / 90%);
+    }
+    
+    .trans:hover {
+        background-color: white;
+    }
+    
+    .img-ani:hover .img1 {
+        display: none;
+    }
+    
+    .img2 {
+        display: none;
+    }
+    
+    .img-ani:hover .img2 {
+        display: block;
+    }
+    
+    .buttonhov:hover {
+        color: black!important;
+        background-color: white;
+        border: 2px solid black!important;
+    }
+    
+    .drp {
+        right: -0.3rem;
+        min-width: 79.2rem;
+        left: -77rem;
+        top: 90px;
+    }
+    
+    .shopdrop {
+        left: -258px;
+        right: -47px;
+        top: -30px;
+        height: 100vh;
+    }
+    
+    .imgcu {
+        position: absolute;
+        top: -356px;
+        left: -41px;
+    }
+    
+    .curbgimg {
+        background-image: url(../img/bedroomidea.png);
+        background-size: cover;
+    }
+    
+    .bg-white {
+        background-color: white;
+    }
+    
+    .img-outer {
+        position: absolute;
+    }
+    
+    .img-inner {
+        position: absolute;
+        top: 51px;
+        left: -55px;
+        right: 104px;
+        height: 395px;
+        padding-bottom: 68px;
+    }
+    
+    .p-7 {
+        padding-right: 5rem;
+    }
+    
+    .img-inn {
+        height: 315px;
+        width: 82%;
+    }
+    
+    .img-out {
+        height: 430px;
+        width: 81%;
+    }
+    
+    .img-inner h1 {
+        transform: rotate(90deg);
+        position: relative;
+        right: -208px;
+        top: -62px;
+    }
+    
+    .img-sider {
+        height: 282px;
+        width: 317px;
+    }
+    
+    .icon-curosel {
+        color: black;
+        border-radius: 50%;
+        background-color: white;
+        height: 50px;
+        width: 50px;
+        box-shadow: 2px 3px 6px grey;
+    }
+    
+    .icon-curosel-right {
+        color: black;
+        border-radius: 50%;
+        background-color: white;
+        height: 50px;
+        width: 50px;
+        box-shadow: 2px 3px 6px grey;
+    }
+    
+    .design .carousel-control-next,
+    .carousel-control-prev {
+        opacity: 1;
+    }
+    
+    #shopping-cart {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 300px;
+        background: #fff;
+        display: none;
+    }
+    
+    .showCart {
+        display: block !important;
+    }
+    
+    #search-show {
+        display: none;
+    }
+    
+    .border-white {
+        border: 2px solid white;
+    }
+    
+    .dropdown-item:hover {
+        color: #de890f !important;
+        background-color: transparent!important;
+    }
+    
+    #furniture-dropdown {
+        display: none;
+        position: absolute;
+        width: 100%;
+        left: 373px;
+        right: 0;
+        top: 76px;
+        max-height: 350px;
+    }
+    
+    .about-banner {
+        background: url(../img/hero.png) no-repeat;
+        background-size: cover;
+        background-position: top;
+        padding-top: 10rem;
+        background-attachment: scroll;
+        padding-bottom: 6.5rem;
+    }
+    
+    .corner {
+        border-radius: 15px;
+        height: 420px;
+    }
+    
+    .small-border {
+        width: 15%;
+        border-bottom: 2px solid gray;
+    }
+    
+    .shadow a:hover {
+        text-decoration: none !important;
+        color: gray !important;
+    }
+    
+    .fnt-20 {
+        font-size: 20px;
+    }
+    
+    .border-gray {
+        border-bottom: 2px solid gray;
+    }
+    
+    .product-img {
+        height: 233px;
+    }
+    
+    .page-link {
+        color: gray;
+        font-weight: 700;
+        background-color: white;
+    }
+    
+    .page-item.active .page-link {
+        color: #fff;
+        background-color: gray;
+        border-color: gray;
+    }
+    
+    .page-link:hover {
+        color: #fff;
+        background-color: gray;
+    }
+    
+    @media screen and (max-width: 1440px) {
+        .drp {
+            left: 0rem;
+        }
+    }
+    
+    @media screen and (max-width: 1024px) {
+        .drp {
+            left: -57rem;
+            min-width: 65.2rem;
+            left: 0rem;
+            top: 74px;
+            min-width: 49.2rem;
+        }
+        #furniture-dropdown {
+            left: 267px;
+        }
+    }
+    /* @media screen and (max-width: 1140px) {
+    .drp {
+        left: -57rem;
+        min-width: 61.2rem;
+        padding-left: 10px;
+    }
+} */
+    
+    @media screen and (max-width: 768px) {
+        .drp {
+            left: 0rem;
+            min-width: 49.2rem;
+        }
+        #furniture-dropdown {
+            position: initial;
+        }
+        .nav-item a:hover {
+            border-bottom: none;
+            color: #de890f !important;
+        }
+    }
+    
+    @media screen and (max-width: 425px) {
+        .drp {
+            left: -2px;
+            min-width: auto;
+        }
+        .p-7 {
+            padding-right: 0;
+        }
+    }
+    
+    @media screen and (max-width: 375px) {
+        .drp {
+            left: 0px;
+            width: 25rem;
+        }
+    }
+    
+    @media screen and (max-width: 325px) {
+        .drp {
+            left: 0px;
+            width: 347px;
+        }
+    }
